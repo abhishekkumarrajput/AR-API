@@ -23,6 +23,7 @@ public class UserEntity {
 	@Id 
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer userId;
+	private Integer roleId;
 	private String fullName;
 	private String Email;
 	private String password;

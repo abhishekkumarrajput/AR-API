@@ -24,8 +24,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppEntity {
-
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long caseNumber;
