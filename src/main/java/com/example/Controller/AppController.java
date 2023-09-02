@@ -20,6 +20,12 @@ public class AppController {
 	
 	@Autowired
 	private AppService appService;
+
+@deleteMapping("/{Intterger usrId}")
+public void deleteUserFetchRecord(@pathvarble Interger USerId){
+thios.appService.deletingByUser(IuserId);
+	return "user Successfully Delete by userId";
+	{
 	
 	@GetMapping("/user/{userId}")
 	public ResponseEntity<AppDto>updateUser(@RequestBody AppDto app,Integer userId ){
