@@ -27,12 +27,6 @@ thios.appService.deletingByUser(IuserId);
 	return "user Successfully Delete by userId";
 	{
 	
-	@GetMapping("/user/{userId}")
-	public ResponseEntity<AppDto>updateUser(@RequestBody AppDto app,Integer userId ){
-	String appDto=this.appService.updateUser(app,userId);
-    return ResponseEntity<AppDto>(appDto.httpstatus.ok);
-	}
-	
   @PostMapping("/app")
 	public ResponseEntity<String>createApp(@RequestBody AppDto appDto){
 		String createApplication = appService.createApplication(appDto);
