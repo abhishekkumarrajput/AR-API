@@ -21,6 +21,12 @@ public class AppController {
 	@Autowired
 	private AppService appService;
 	
+	@GetMapping("/user/{userId}")
+	public ResponseEntity<AppDto>updateUser(@RequestBody AppDto app,Integer userId ){
+	String appDto=this.appService.updateUser(app,userId);
+    return ResponseEntity<AppDto>(appDto.httpstatus.ok);
+	}
+	
   @PostMapping("/app")
 	public ResponseEntity<String>createApp(@RequestBody AppDto appDto){
 		String createApplication = appService.createApplication(appDto);
