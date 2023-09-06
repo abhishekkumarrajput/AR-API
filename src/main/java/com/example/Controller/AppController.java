@@ -30,6 +30,10 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
 		String createApplication = appService.createApplication(appDto);
 		int compareTo = createApplication.compareTo(createApplication);
 		System.out.println(compareTo);
+		oerjfos
+		sdm,fngdskj
+		fkjrhuri
+		sdjglk
 		logger.info(createApplication);
 		return new ResponseEntity<String>(createApplication,HttpStatus.OK);
 	}
