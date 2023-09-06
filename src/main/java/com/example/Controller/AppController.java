@@ -28,6 +28,23 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
   @PostMapping("/app")
 	public ResponseEntity<String>createApp(@RequestBody AppDto appDto){
 		String createApplication = appService.createApplication(appDto);
+		int compareTo = createApplication.compareTo(createApplication);
+		System.out.println(compareTo);
+<<<<<<< HEAD
+<<<<<<< HEAD
+		oerjfos
+		sdm,fngdskj
+		fkjrhuri
+		sdjglk
+=======
+		jsjdfhkfs
+			ksdhkdsn 
+			sdkbkfash
+			fsnfbirer
+>>>>>>> dc62510078d52fdf2c1bef8f851fe36221d36d0e
+=======
+>>>>>>> parent of 683dc17 (merging)
+		logger.info(createApplication);
 		return new ResponseEntity<String>(createApplication,HttpStatus.OK);
 	}
 
