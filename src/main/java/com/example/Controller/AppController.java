@@ -31,6 +31,7 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
 		int compareTo = createApplication.compareTo(createApplication);
 		System.out.println(compareTo);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		oerjfos
 		sdm,fngdskj
 		fkjrhuri
@@ -41,6 +42,8 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
 			sdkbkfash
 			fsnfbirer
 >>>>>>> dc62510078d52fdf2c1bef8f851fe36221d36d0e
+=======
+>>>>>>> parent of 683dc17 (merging)
 		logger.info(createApplication);
 		return new ResponseEntity<String>(createApplication,HttpStatus.OK);
 	}
