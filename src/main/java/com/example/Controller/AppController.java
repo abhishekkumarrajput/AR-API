@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,10 +28,10 @@ public class AppController {
 		return new ResponseEntity<String>(createApplication,HttpStatus.OK);
 	}
 
-@GetMapping("/{userId}")
-public ResponseEntity<List<AppDto>>getApps(@PathVariable Integer userId){
-	List<AppDto> fetchApp = this.appService.fetchApp(userId);
-	return new ResponseEntity<List<AppDto>>(fetchApp,HttpStatus.OK);
+@GetMapping("/{getUserId}")
+public ResponseEntity<List<AppDto>>getApps(@PathVariable Integer getUserId){
+	List<AppDto> fetchApp = this.appService.fetchApp(getUserId);
+	return new ResponseEntity<List<AppDto>>(fetchApp,HttpStatus.ACCEPTED);
 }
 
 	
