@@ -29,6 +29,10 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
 	public ResponseEntity<String>createApp(@RequestBody AppDto appDto){
 		String createApplication = appService.createApplication(appDto);
 		return new ResponseEntity<String>(createApplication,HttpStatus.OK);
+		System.out.println("how to");
+		System.out.println("how to");
+		System.out.println("how to");
+		System.out.println("how to");
 	}
 
 @GetMapping("/{getUserId}")
