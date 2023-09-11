@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Dao.AppDto;
@@ -36,6 +37,11 @@ private Logger logger= LoggerFactory.getLogger(AppController.class);
 public ResponseEntity<List<AppDto>>getApps(@PathVariable Integer getUserId){
 	List<AppDto> fetchApp = this.appService.fetchApp(getUserId);
 	return new ResponseEntity<List<AppDto>>(fetchApp,HttpStatus.ACCEPTED);
+}
+
+@PutMapping("/{userId}")
+public ResponseEntity<List<AppDto>>updateUser(@RequestBody AppDto appDto,Integer userId){
+	return null;
 }
 
 	
