@@ -39,10 +39,6 @@ public ResponseEntity<List<AppDto>>getApps(@PathVariable Integer getUserId){
 	return new ResponseEntity<List<AppDto>>(fetchApp,HttpStatus.ACCEPTED);
 }
 
-@PutMapping("/{userId}")
-public ResponseEntity<List<AppDto>>updateUser(@RequestBody AppDto appDto,Integer userId){
-	return null;
-}
 
 	
 }
